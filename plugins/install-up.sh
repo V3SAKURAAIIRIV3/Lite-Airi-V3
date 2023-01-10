@@ -1,0 +1,71 @@
+#!/bin/bash
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+yl='\e[32;1m'
+bl='\e[36;1m'
+gl='\e[32;1m'
+rd='\e[31;1m'
+mg='\e[0;95m'
+blu='\e[34m'
+op='\e[35m'
+or='\033[1;33m'
+bd='\e[1m'
+color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
+
+red='\e[1;31m'
+bred1='\e[0;47;30m'
+bred='\e[41m'
+blue='\e[0;34m'
+blue_b='\e[1;94m'
+yellow='\e[1;33m'
+purple='\e[1;35m'
+white='\e[1;37m'
+try='\e[0;103m'
+cyan='\e[1;36m'
+green='\e[1;32m'
+NC='\e[0m'
+
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+###########- COLOR CODE -##############
+colornow=$(cat /etc/sakurav3/theme/color.conf)
+export NC="\e[0m"
+export YELLOW='\033[0;33m';
+export RED="\033[0;31m" 
+export COLOR1="$(cat /etc/sakurav3/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+export COLBG1="$(cat /etc/sakurav3/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"                    
+###########- END COLOR CODE -##########
+
+echo -e "   [ ${green}INFO${NC} ] Remove Old Script"
+
+
+sleep 2
+echo -e "   [ ${green}INFO${NC} ] Downloading New Script"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-ss.sh" && chmod +x /usr/bin/menu-ss
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-vless.sh" && chmod +x /usr/bin/menu-vless
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-ssh.sh" && chmod +x /usr/bin/menu-ssh
+wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-set.sh" && chmod +x /usr/bin/menu-set
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-backup.sh" && chmod +x /usr/bin/menu-backup
+wget -q -O /usr/bin/autoboot "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/autoboot.sh" && chmod +x /usr/bin/autoboot
+wget -q -O /usr/bin/menu-tcp "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-tcp.sh" && chmod +x /usr/bin/menu-tcp
+wget -q -O /usr/bin/rebootvps "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/rebootvps.sh" && chmod +x /usr/bin/rebootvps
+wget -q -O /usr/bin/menu-dns "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-dns.sh" && chmod +x /usr/bin/menu-dns
+wget -q -O /usr/bin/check-dns "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/ceknet.sh" && chmod +x /usr/bin/check-dns
+wget -q -O /usr/bin/info "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/info.sh" && chmod +x /usr/bin/info
+wget -q -O /usr/bin/mspeed "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-speedtest.sh" && chmod +x /usr/bin/mspeed
+wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-bandwith.sh" && chmod +x /usr/bin/mbandwith
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/restart.sh" && chmod +x /usr/bin/restart
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/update.sh" && chmod +x /usr/bin/update
+
+sleep 2
+echo -e "   [ ${green}INFO${NC} ] Download Changelog File"
+wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/plugins/changelog.txt" && chmod +x /root/changelog.txt
+echo -e "   [ ${green}INFO${NC} ] Read Changelog? ./root/changelog.txt"
+sleep 2
