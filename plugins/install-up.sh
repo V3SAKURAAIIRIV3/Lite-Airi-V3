@@ -45,28 +45,5 @@ echo -e "   [ ${green}INFO${NC} ] Remove Old Script"
 
 sleep 2
 echo -e "   [ ${green}INFO${NC} ] Downloading New Script"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-ss.sh" && chmod +x /usr/bin/menu-ss
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-vless.sh" && chmod +x /usr/bin/menu-vless
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-ssh.sh" && chmod +x /usr/bin/menu-ssh
-wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-set.sh" && chmod +x /usr/bin/menu-set
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-backup.sh" && chmod +x /usr/bin/menu-backup
-wget -q -O /usr/bin/autoboot "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/autoboot.sh" && chmod +x /usr/bin/autoboot
-wget -q -O /usr/bin/menu-tcp "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-tcp.sh" && chmod +x /usr/bin/menu-tcp
-wget -q -O /usr/bin/rebootvps "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/rebootvps.sh" && chmod +x /usr/bin/rebootvps
-wget -q -O /usr/bin/menu-dns "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-dns.sh" && chmod +x /usr/bin/menu-dns
-wget -q -O /usr/bin/check-dns "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/ceknet.sh" && chmod +x /usr/bin/check-dns
-wget -q -O /usr/bin/info "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/info.sh" && chmod +x /usr/bin/info
-wget -q -O /usr/bin/mspeed "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-speedtest.sh" && chmod +x /usr/bin/mspeed
-wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/menu-bandwith.sh" && chmod +x /usr/bin/mbandwith
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/restart.sh" && chmod +x /usr/bin/restart
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/menu/update.sh" && chmod +x /usr/bin/update
 
-sleep 2
-echo -e "   [ ${green}INFO${NC} ] Download Changelog File"
-wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/plugins/changelog.txt" && chmod +x /root/changelog.txt
-echo -e "   [ ${green}INFO${NC} ] Read Changelog? ./root/changelog.txt"
-mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/dharak36/Xray-core/releases/download/v1.0.0/xray.linux.64bit" && chmod 755 /usr/local/bin/xray && restart
 sleep 2
