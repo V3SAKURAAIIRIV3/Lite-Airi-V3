@@ -43,6 +43,11 @@ echo -e "   [ ${green}INFO${NC} ] Remove Old Script"
 
 
 sleep 2
-echo -e "   [ ${green}INFO${NC} ] Downloading New Script"
+echo -e "  [INFO] Downloading New Script"
 
+
+sleep 2
+echo -e "  [INFO] Download Changelog File"
+wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/plugins/changelog.txt" && chmod +x /root/changelog.txt
+echo -e "  [INFO] Read Changelog? ./root/changelog.txt"
 sleep 2
