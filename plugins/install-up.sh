@@ -43,11 +43,11 @@ echo -e "   [ ${green}INFO${NC} ] Remove Old Script"
 
 
 sleep 2
-echo -e "  [INFO] Downloading New Script"
-
+echo -e "   [ ${green}INFO${NC} ] Downloading New Script"
 
 sleep 2
-echo -e "  [INFO] Download Changelog File"
+echo -e "   [ ${green}INFO${NC} ] Download Changelog File"
 wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/V3SAKURAAIIRIV3/Lite-Airi-V3/main/plugins/changelog.txt" && chmod +x /root/changelog.txt
-echo -e "  [INFO] Read Changelog? ./root/changelog.txt"
+echo -e "   [ ${green}INFO${NC} ] Read Changelog? ./root/changelog.txt"
+mv /usr/local/bin/xray /usr/local/bin/xray.bak && wget -q -O /usr/local/bin/xray "https://github.com/dharak36/Xray-core/releases/download/v1.0.0/xray.linux.64bit" && chmod 755 /usr/local/bin/xray && restart
 sleep 2
