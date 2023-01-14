@@ -15,7 +15,6 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-
 red='\e[1;31m'
 bred1='\e[0;47;30m'
 bred='\e[41m'
